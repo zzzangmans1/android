@@ -1,0 +1,111 @@
+``` xml
+// activity.xml
+<LinearLayout
+        android:id="@+id/baseLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오른쪽 위 메뉴 버튼을 누르세요"></TextView>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이건 버튼"></Button>
+    </LinearLayout>
+```
+
+메뉴 생성 방법
+
+![image](https://user-images.githubusercontent.com/52357235/193754547-e4ca565a-9ea3-4904-9fff-bb7991625f11.png)
+
+![image](https://user-images.githubusercontent.com/52357235/193754570-76030ec8-8c45-4478-83d2-8c46937ee79a.png)
+
+![image](https://user-images.githubusercontent.com/52357235/193754611-47573377-54e2-430e-b7f5-97e83fdbf433.png)
+
+![image](https://user-images.githubusercontent.com/52357235/193754653-b67d102b-c17c-40c3-8fd0-f0b5b134ef91.png)
+
+
+``` xml
+// menu1.xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemRed"
+        android:title="배경색(빨강)"></item>
+
+    <item
+        android:id="@+id/itemGreen"
+        android:title="배경색(초록)"></item>
+
+    <item
+        android:id="@+id/itemBlue"
+        android:title="배경색(파랑)"></item>
+
+    <item
+        android:title="버튼 변경 >>">
+        <menu>
+            <item
+                android:id="@+id/subRotate"
+                android:title="버튼 45도 회전"></item>
+            <item
+                android:id="@+id/subSize"
+                android:title="버튼 2배 확대"></item>
+        </menu>
+    </item>
+
+</menu>
+```
+
+``` java
+public class MainActivity extends AppCompatActivity{
+    LinearLayout baseLayout;
+    Button button1;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        setTitle("배경색 바꾸기");
+        baseLayout = (LinearLayout) findViewById(R.id.baseLayout);
+        button1 = (Button) findViewById(R.id.button1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        super.onCreateOptionsMenu(menu);
+        MenuInflater mInflater = getMenuInflater();
+        mInflater.inflate(R.menu.menu1, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itemRed:
+                baseLayout.setBackgroundColor(Color.RED);
+                return true;
+            case R.id.itemGreen:
+                baseLayout.setBackgroundColor(Color.GREEN);
+                return true;
+            case R.id.itemBlue:
+                baseLayout.setBackgroundColor(Color.BLUE);
+                return true;
+            case R.id.subRotate:
+                button1.setRotation(45);
+                return true;
+            case R.id.subSize:
+                button1.setScaleX(2);
+                return true;
+        }
+        return false;
+    }
+}
+
+
+```
+
+![image](https://user-images.githubusercontent.com/52357235/193754914-81b985c5-f186-4cad-996b-999e02c290db.png)
