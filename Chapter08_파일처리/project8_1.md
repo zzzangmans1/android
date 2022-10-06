@@ -103,5 +103,10 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+Device File Explorer - data - data - 패키지 이름 - files 에 저장됩니다.
+
+![image](https://user-images.githubusercontent.com/52357235/194247089-e3633fd8-e1ad-42b1-b648-14968fbb7544.png)
+
+
 ![image](https://user-images.githubusercontent.com/52357235/194245973-54424348-9592-405d-9a34-4a1da8d9eca9.png)
 
