@@ -61,3 +61,6 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+액티비티 생명주기 테스트 Logcat으로 확인
+
+![image](https://user-images.githubusercontent.com/52357235/195484612-541a858d-55a2-4626-9ff4-d7af918e7816.png)
