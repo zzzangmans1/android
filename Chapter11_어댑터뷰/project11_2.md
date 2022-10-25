@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+
 ``` xml
 <LinearLayout
         android:layout_width="match_parent"
