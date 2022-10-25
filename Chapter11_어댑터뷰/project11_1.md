@@ -109,5 +109,3 @@ dialog.xml
 
 <img width="437" alt="image" src="https://user-images.githubusercontent.com/52357235/197723133-8a3a4333-17ac-46b6-b242-5c6a4fa08dbc.png">
 
-
-        <ImageView
