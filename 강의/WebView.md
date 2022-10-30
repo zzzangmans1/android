@@ -54,8 +54,6 @@ Interent 권한부여 manifest xml파일에 권한 추가
 ```
 
 
-ERR_CLEARTEXT_NOT_PERMITTED 오류 발생시 
-
 AndroidManifest.xml의 application 태그에android:usesCleartextTraffic="true"
 
 <img width="355" alt="image" src="https://user-images.githubusercontent.com/52357235/198862339-99022b79-ab9e-4cae-bd5c-98cd920555a7.png">
