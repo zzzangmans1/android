@@ -133,3 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
 </LinearLayout>
 ```
+
+<img width="505" alt="image" src="https://user-images.githubusercontent.com/52357235/198942869-288ae7e4-ff32-4171-94a5-ecd61b4eb20b.png">
+
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/52357235/198942891-df01d1c6-0516-494f-947c-ec8c839f5700.png">
